@@ -1,0 +1,223 @@
+/* ===========================
+    Color Variables & Theme
+   =========================== */
+:root {
+    --bg-color: #0d0d20; /* Deepest Navy from image */
+    --card-bg: #1a193e; /* Dark Navy for cards/sections */
+    --text-main: #e5e2f3; /* Lightest Lavender for text */
+    --text-muted: #aca5db; /* Muted Lavender for descriptions */
+
+    /* Feature Colors (Mapped to your new Purple Palette) */
+    --primary-accent: #7168c3; /* Vibrant Purple */
+    --secondary-accent: #8f87cf; /* Lighter Purple */
+    --tertiary-accent: #534ab7; /* Deep Purple */
+
+    /* Action Colors (Slightly adjusted for contrast against deep navy) */
+    --success: #4ade80;
+    --danger: #f87171;
+    --warning: #facc15;
+}
+
+/* ===========================
+    General Layout & Typography
+   =========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-main);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    color: var(--primary-accent);
+    border-bottom: 2px solid rgba(113, 104, 195, 0.3);
+    padding-bottom: 10px;
+    font-size: 2rem;
+}
+
+h2 {
+    color: var(--primary-accent);
+    font-size: 1.5rem;
+}
+
+h3 {
+    color: var(--secondary-accent);
+    font-size: 1.25rem;
+}
+
+p {
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+/* ===========================
+    Container & Card Styling
+   =========================== */
+.container {
+    max-width: 900px;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 2rem !important;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+    border-color: var(--primary-accent);
+}
+
+/* ===========================
+    Form Styling
+   =========================== */
+.mb-4 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+    background-color: #0d0d20 !important; /* Using darkest navy */
+    border: 1px solid rgba(113, 104, 195, 0.4) !important;
+    border-radius: 8px !important;
+    padding: 12px !important;
+    color: var(--text-main) !important;
+    width: 100%;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-accent) !important;
+    box-shadow: 0 0 0 3px rgba(113, 104, 195, 0.2);
+    background-color: #0d0d20 !important;
+}
+
+/* ===========================
+    Button Styling
+   =========================== */
+button,
+.btn,
+.btn-primary,
+.bg-blue-500,
+.bg-blue-600,
+.bg-blue-700 {
+    background-color: var(--primary-accent) !important;
+    color: white !important;
+    padding: 12px 24px !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    border: none;
+    cursor: pointer;
+    transition:
+        filter 0.3s ease,
+        transform 0.2s ease;
+    font-size: 1rem;
+}
+
+button:hover,
+.btn:hover {
+    filter: brightness(1.15);
+    transform: translateY(-1px);
+}
+
+/* Button Variants */
+.bg-green-500,
+.bg-green-600 {
+    background-color: var(--success) !important;
+}
+.bg-purple-500,
+.bg-purple-600 {
+    background-color: var(--tertiary-accent) !important;
+}
+
+/* ===========================
+    Link & Text Styling
+   =========================== */
+a {
+    color: var(--secondary-accent);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: var(--text-main);
+    text-decoration: underline;
+}
+
+/* ===========================
+    Table Styling
+   =========================== */
+thead {
+    background-color: rgba(113, 104, 195, 0.15);
+    border-bottom: 2px solid var(--primary-accent);
+}
+
+thead th {
+    color: var(--secondary-accent);
+    padding: 1rem;
+    text-align: left;
+}
+
+tbody tr:hover {
+    background-color: rgba(113, 104, 195, 0.1);
+}
+
+/* ===========================
+    Scrollbar Styling
+   =========================== */
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--tertiary-accent);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-accent);
+}
