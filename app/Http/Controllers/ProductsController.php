@@ -97,7 +97,8 @@ class ProductsController extends Controller
         $totalProducts = Products::count();
         $totalOrders = Orders::count();
         $totalPayments = \App\Models\Payment::where('status', 'paid')->sum('amount');
+        $products = Products::all();  // ADD THIS LINE
         
-        return view('actions', compact('totalProducts', 'totalOrders', 'totalPayments'));
+        return view('dashboard', compact('totalProducts', 'totalOrders', 'totalPayments', 'products'));
     }
 }

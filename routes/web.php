@@ -24,6 +24,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('products', ProductsController::class);
     Route::resource('orders', OrdersController::class);
     Route::resource('payments', PaymentController::class);
+
+    Route::get('/dashboard', [ProductsController::class, 'actions'])->name('dashboard');
 });
 
 require __DIR__.'/auth.php';

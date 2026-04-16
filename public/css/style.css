@@ -2,10 +2,10 @@
     Color Variables & Theme
    =========================== */
 :root {
-    --bg-color: #0d0d20; /* Deepest Navy from image */
-    --card-bg: #1a193e; /* Dark Navy for cards/sections */
-    --text-main: #e5e2f3; /* Lightest Lavender for text */
-    --text-muted: #aca5db; /* Muted Lavender for descriptions */
+    --bg-color: #252569; /* Deepest Navy from image */
+    --card-bg: #615eb7; /* Dark Navy for cards/sections */
+    --text-main: #ffffff; /* Lightest Lavender for text */
+    --text-muted: #dcd8f8; /* Muted Lavender for descriptions */
 
     /* Feature Colors (Mapped to your new Purple Palette) */
     --primary-accent: #7168c3; /* Vibrant Purple */
@@ -41,7 +41,7 @@ h4,
 h5,
 h6 {
     color: var(--text-main);
-    font-weight: 600;
+    font-weight: 800;
     margin-bottom: 1rem;
 }
 
